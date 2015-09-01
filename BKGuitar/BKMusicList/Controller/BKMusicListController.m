@@ -273,29 +273,35 @@
             NSString *newPath = [caches stringByAppendingPathComponent:@"pic.plist"];
             //获取plist中的存储图片名的字典
             NSMutableArray *arr = [NSMutableArray arrayWithContentsOfFile:newPath];
-    
-            NSString *file = [caches stringByAppendingPathComponent:arr[indexPath.row]];
-    
-    
-            if (!arr[indexPath.row]) {
-                return ;
-            }
-            //移去删除的图片，并重新写入plist
-            [arr removeObjectAtIndex:indexPath.row];
-            [arr writeToFile:newPath atomically:YES];
-            [self.images removeObjectAtIndex:indexPath.row];
-            BOOL result=[[NSFileManager defaultManager] fileExistsAtPath:file];
-            if (!result) {
-                return ;
-            }else {
-                BOOL blDele= [fileManager removeItemAtPath:file error:nil];
-                if (blDele) {
-                    [MBProgressHUD showSuccess:@"删除成功"];
-                }else {
+            BOOL blDele = YES;
+            for(int i =0;i<arr.count;i++){
+          
+                NSString *file = [caches stringByAppendingPathComponent:arr[indexPath.row][i]];
+                if (!arr[indexPath.row][i]) {
+                    return ;
+                }
+                BOOL result =[[NSFileManager defaultManager] fileExistsAtPath:file];
+                if (!result) {
+                    return ;
+                }
+                blDele = [fileManager removeItemAtPath:file error:nil];
+                if(!blDele){
                     [MBProgressHUD showError:@"删除失败"];
+                    return;
                 }
                 
             }
+            
+    
+            //移去删除的图片，并重新写入plist
+        BKLog(@"钱钱%d",arr.count);
+           [arr removeObjectAtIndex:indexPath.row];
+           BKLog(@"厚厚%d",arr.count);
+            [arr writeToFile:newPath atomically:YES];
+            [self.images removeObjectAtIndex:indexPath.row];
+            [MBProgressHUD showSuccess:@"删除成功"];
+            
+        
      
         [self.tableView reloadData];
     }else{
@@ -370,25 +376,28 @@
 //    }
     __weak typeof(self) weakSelf = self;
     NSMutableArray *array = [NSMutableArray array];
+    BKLog(@"%d",assets.count);
     for(int i=0; i< assets.count; i++){
-    
-        if([[assets[i] valueForProperty:@"ALAssetPropertyType"] isEqualToString:@"ALAssetTypePhoto"]) //Photo
-        {
-            [assets enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                ALAsset *representation = obj;
-                
-                UIImage *img = [UIImage imageWithCGImage:representation.defaultRepresentation.fullResolutionImage
-                                                   scale:representation.defaultRepresentation.scale
-                                             orientation:(UIImageOrientation)representation.defaultRepresentation.orientation];
-                [array addObject:img];
 
-     
-//                *stop = YES;
-            }];
-            
-            
-        }
+                if([[assets[i] valueForProperty:@"ALAssetPropertyType"] isEqualToString:@"ALAssetTypePhoto"])
+                {
+                    
+                    [assets enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                        ALAsset *representation = obj;
+                        
+                        UIImage *img = [UIImage imageWithCGImage:representation.defaultRepresentation.fullResolutionImage
+                                                           scale:representation.defaultRepresentation.scale
+                                                     orientation:(UIImageOrientation)representation.defaultRepresentation.orientation];
+                        
+                        [array addObject:img];
+                        
+                    }];
+                    
+                }
+        
+
     }
+    BKLog(@"%d",array.count);
     [weakSelf.images addObject:array];
     [self saveImages:array Name:self.names.lastObject];
     [self.tableView reloadData];
