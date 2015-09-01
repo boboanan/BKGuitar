@@ -88,16 +88,9 @@
 {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancell)];
     
-    UILabel *titleView = [[UILabel alloc] init];
-    titleView.width = 200;
-    titleView.height = 44;
-    titleView.textAlignment = NSTextAlignmentCenter;
-    //自动换行
-    titleView.numberOfLines = 0;
-    titleView.text = @"照片 ";
+
     
-    
-    self.navigationItem.titleView = titleView;
+    self.navigationItem.title= @"照片";
 }
 
 -(void)cancell

@@ -36,16 +36,44 @@
         NSMutableArray *arr = [NSMutableArray arrayWithContentsOfFile:newPath];
         
         if(arr){
-            _names = arr;
+            for(int i =0; i<arr.count; i++){
+               [_names addObject:arr[i][0]];
+            }
         }
     }
     return _names;
 }
 
+//-(NSMutableArray *)images
+//{
+//    if(!_images){
+//       //获取plist目录
+//        NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) lastObject];
+//        NSString *newPath = [caches stringByAppendingPathComponent:@"pic.plist"];
+//        //获取plist中的存储图片名的字典
+//        NSMutableArray *arr = [NSMutableArray arrayWithContentsOfFile:newPath];
+//        
+//        _images = [NSMutableArray array];
+//        if(!arr){//不存在缓存图片时，直接返回
+//            return _images;
+//        }
+//        for(int i = 0; i < arr.count; i++){
+//            //存在时获得图片
+//            NSString *file = [caches stringByAppendingPathComponent:arr[i]];
+//            
+//            NSData *data = [NSData dataWithContentsOfFile:file];
+//            
+//            UIImage *image = [UIImage imageWithData:data];
+//            
+//            [_images addObject:image];
+//        }
+//    }
+//    return _images;
+//}
 -(NSMutableArray *)images
 {
     if(!_images){
-       //获取plist目录
+        //获取plist目录
         NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) lastObject];
         NSString *newPath = [caches stringByAppendingPathComponent:@"pic.plist"];
         //获取plist中的存储图片名的字典
@@ -56,14 +84,18 @@
             return _images;
         }
         for(int i = 0; i < arr.count; i++){
-            //存在时获得图片
-            NSString *file = [caches stringByAppendingPathComponent:arr[i]];
-            
-            NSData *data = [NSData dataWithContentsOfFile:file];
-            
-            UIImage *image = [UIImage imageWithData:data];
-            
-            [_images addObject:image];
+            NSMutableArray *array = [NSMutableArray array];
+            for(int j = 0; j<[arr[i] count]; j++){
+                //存在时获得图片
+                NSString *file = [caches stringByAppendingPathComponent:arr[i][j]];
+                
+                NSData *data = [NSData dataWithContentsOfFile:file];
+                UIImage *image = [UIImage imageWithData:data];
+                [array addObject:image];
+                
+            }
+       
+            [_images addObject:array];
         }
     }
     return _images;
@@ -196,7 +228,7 @@
         picker.delegate = self;
         
         picker.maximumNumberOfSelectionVideo = 0;
-        picker.maximumNumberOfSelectionPhoto = 1;
+        picker.maximumNumberOfSelectionPhoto = 5;
         
         
         [self presentViewController:picker animated:YES completion:^{
@@ -223,7 +255,7 @@
     if(!cell){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
-    cell.imageView.image = self.images[indexPath.row];
+    cell.imageView.image = self.images[indexPath.row][0];
     cell.textLabel.text = self.names[indexPath.row];
     return cell;
 }
@@ -267,8 +299,7 @@
      
         [self.tableView reloadData];
     }else{
-        NSArray *images = @[self.images[indexPath.row]];
-        BKImageShowController *imageShowController = [BKImageShowController controllerInitWithImagesArray:images index:0];
+        BKImageShowController *imageShowController = [BKImageShowController controllerInitWithImagesArray:self.images[indexPath.row] index:0];
         BKNavigationController *nav = [[BKNavigationController alloc] initWithRootViewController:imageShowController];
         [self presentViewController:nav animated:YES completion:^{
             
@@ -319,58 +350,119 @@
 #pragma UzysAssetsPickerControllerDelegate
 - (void)uzysAssetsPickerController:(UzysAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets
 {
+//    __weak typeof(self) weakSelf = self;
+//    if([[assets[0] valueForProperty:@"ALAssetPropertyType"] isEqualToString:@"ALAssetTypePhoto"]) //Photo
+//    {
+//        [assets enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//            ALAsset *representation = obj;
+//            
+//            UIImage *img = [UIImage imageWithCGImage:representation.defaultRepresentation.fullResolutionImage
+//                                               scale:representation.defaultRepresentation.scale
+//                                         orientation:(UIImageOrientation)representation.defaultRepresentation.orientation];
+//            [weakSelf.images addObject:img];
+//
+//            [self saveImage:img Name:self.names.lastObject];
+//                 [self.tableView reloadData];
+//            *stop = YES;
+//        }];
+//        
+//        
+//    }
     __weak typeof(self) weakSelf = self;
-    if([[assets[0] valueForProperty:@"ALAssetPropertyType"] isEqualToString:@"ALAssetTypePhoto"]) //Photo
-    {
-        [assets enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            ALAsset *representation = obj;
-            
-            UIImage *img = [UIImage imageWithCGImage:representation.defaultRepresentation.fullResolutionImage
-                                               scale:representation.defaultRepresentation.scale
-                                         orientation:(UIImageOrientation)representation.defaultRepresentation.orientation];
-            [weakSelf.images addObject:img];
+    NSMutableArray *array = [NSMutableArray array];
+    for(int i=0; i< assets.count; i++){
+    
+        if([[assets[i] valueForProperty:@"ALAssetPropertyType"] isEqualToString:@"ALAssetTypePhoto"]) //Photo
+        {
+            [assets enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                ALAsset *representation = obj;
+                
+                UIImage *img = [UIImage imageWithCGImage:representation.defaultRepresentation.fullResolutionImage
+                                                   scale:representation.defaultRepresentation.scale
+                                             orientation:(UIImageOrientation)representation.defaultRepresentation.orientation];
+                [array addObject:img];
 
-//            [self saveImage:img Name:representation.defaultRepresentation.filename];
-            [self saveImage:img Name:self.names.lastObject];
-                 [self.tableView reloadData];
-            *stop = YES;
-        }];
-        
-        
+     
+//                *stop = YES;
+            }];
+            
+            
+        }
     }
+    [weakSelf.images addObject:array];
+    [self saveImages:array Name:self.names.lastObject];
+    [self.tableView reloadData];
 }
 
 #pragma customer methods
--(void)saveImage:(UIImage *)image Name:(NSString *)name
+//-(void)saveImage:(UIImage *)image Name:(NSString *)name
+//{
+//    //将图片转为二进制文件
+//    NSData *data = UIImageJPEGRepresentation(image, 1);
+//    //图片写入沙盒
+//    NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) lastObject];
+//    
+//    NSString *file = [caches stringByAppendingPathComponent:name];
+//    
+//    BOOL result = [data writeToFile:file atomically:YES];
+//   
+//    if (result) {
+//        [MBProgressHUD showSuccess:@"success"];
+//    }else {
+//        [MBProgressHUD showError:@"error"];
+//    }
+//    
+//    //将图片名字存入plist
+//    NSString *newPath = [caches stringByAppendingPathComponent:@"pic.plist"];
+//    NSMutableArray *arr = [NSMutableArray arrayWithContentsOfFile:newPath];
+//    if(!arr){
+//        NSMutableArray *arr = [[NSMutableArray alloc] init];
+//        [arr addObject:name];
+//        [arr writeToFile:newPath atomically:YES];
+//    }
+//    [arr addObject:name];
+//    [arr writeToFile:newPath atomically:YES];
+//  
+//
+//}
+-(void)saveImages:(NSMutableArray *)images Name:(NSString *)name
 {
-    //将图片转为二进制文件
-    NSData *data = UIImageJPEGRepresentation(image, 1);
-    //图片写入沙盒
     NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) lastObject];
-    
-    NSString *file = [caches stringByAppendingPathComponent:name];
-    
-    BOOL result = [data writeToFile:file atomically:YES];
-   
-    if (result) {
-        [MBProgressHUD showSuccess:@"success"];
-    }else {
-        [MBProgressHUD showError:@"error"];
-    }
-    
+  
     //将图片名字存入plist
     NSString *newPath = [caches stringByAppendingPathComponent:@"pic.plist"];
     NSMutableArray *arr = [NSMutableArray arrayWithContentsOfFile:newPath];
+    
     if(!arr){
-        NSMutableArray *arr = [[NSMutableArray alloc] init];
-        [arr addObject:name];
-        [arr writeToFile:newPath atomically:YES];
+        arr = [[NSMutableArray alloc] init];
     }
-    [arr addObject:name];
-    [arr writeToFile:newPath atomically:YES];
-  
+    NSMutableArray *nameArray = [NSMutableArray array];
+    for(int i =0; i < images.count; i++){
+        //将图片转为二进制文件
+        NSData *data = UIImageJPEGRepresentation(images[i], 1);
+        NSString *fileName;
+        if(i == 0){
+           fileName = [NSString stringWithFormat:@"%@",name];
+        }else{
+           fileName = [NSString stringWithFormat:@"%@-%d",name,i];
+        }
+        NSString *file = [caches stringByAppendingPathComponent:fileName];
+        [nameArray addObject:fileName];
+        BOOL result = [data writeToFile:file atomically:YES];
+        
+        if(!result){
+            [MBProgressHUD showError:@"error"];
+            return;
+        }
+    }
 
+    [arr addObject:nameArray];
+    [arr writeToFile:newPath atomically:YES];
+    [MBProgressHUD showSuccess:@"success"];
+    
 }
+
+
 
 
 @end
