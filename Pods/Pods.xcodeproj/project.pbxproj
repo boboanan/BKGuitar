@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A172698220B4785C5E420B5 /* UzysAssetsViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D852A8078578C215BAD1DF25 /* UzysAssetsViewCell.h */; };
+		12DF6779DDE79F68E667B842 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF62598AF9608F1AC4B1328 /* MobileCoreServices.framework */; };
+		16DA39D88695B8A632869C4F /* UzysAssetsPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 23C6A319DECBA7BE8DE0C69C /* UzysAssetsPickerController.h */; };
+		2A41028E61DDBAF17AAAC6D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67D36BA90FAC46D289030B9 /* QuartzCore.framework */; };
+		34E91C520A70C5FCDB08A6B4 /* UzysWrapperPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D206D9BF444A88AABECDDB /* UzysWrapperPickerController.m */; };
+		378EFE516B30C3415DFC35B1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E469C61016C3D1C3C98D2E /* AssetsLibrary.framework */; };
+		38529017DD2A6D38586B5EC0 /* UIImage+UzysExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 56CF933A114ADF7C0BACAB49 /* UIImage+UzysExtension.h */; };
+		3CEDAA5FC83CA44EE5705D82 /* UzysAssetsPickerController_Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D3B44D4D454EDC82724F14 /* UzysAssetsPickerController_Configuration.h */; };
+		3F854C9C20DF12123584FF8F /* UzysAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB93D0B73A0B0EF5D4FEBCE /* UzysAssetsPickerController.m */; };
+		421BEF44FA1525A8794A7E6C /* UzysAppearanceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A007B42945E2D294CF5CD35 /* UzysAppearanceConfig.m */; };
+		88CAE7C25D0A7ABF9AB8FF69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F33BE865D15A52DC5E47E5 /* Foundation.framework */; };
+		8D33B9878F657FA8FF661CA3 /* UzysGroupPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 86113A47039C5221B621ADBF /* UzysGroupPickerView.h */; };
+		951B7A0622879F6B0C132E07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B46A9CC48C0B9794A2B2B82 /* AVFoundation.framework */; };
+		AC270D3264C879F7F25E895E /* UzysGroupViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 322BADB959C97C718FC635C2 /* UzysGroupViewCell.h */; };
+		AD11C9BFF242CD2DCB9F9E51 /* Pods-UzysAssetsPickerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F62DEDD7164815D8D007EF /* Pods-UzysAssetsPickerController-dummy.m */; };
+		B562BE572F65366F95EAFB2E /* UzysGroupPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 847134DF104C01EE94DFAA46 /* UzysGroupPickerView.m */; };
+		BF45C0FE49063C2900C36ABD /* UzysAppearanceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B0FF736B4DCD248384E6DB4C /* UzysAppearanceConfig.h */; };
+		C9CB0021AE8410D507E62892 /* UzysGroupViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 462E348EC8504CC8644D249B /* UzysGroupViewCell.m */; };
+		DF075493B5A25EAF508EDF7E /* UIImage+UzysExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B9051DD6D6C0DA859B88D0 /* UIImage+UzysExtension.m */; };
+		ECD7DFC50B9262F5C51A9266 /* UzysAssetsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2560D81E270AFB393FA37B2E /* UzysAssetsViewCell.m */; };
+		F40BA38CE79675D391322952 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF14415273E00646EDED005 /* CoreGraphics.framework */; };
+		F5BD5507DC6279113E49714A /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC50CCCC9E59E9601B3D72DD /* Pods-dummy.m */; };
+		FAD93EFC8A3D3BCD5A5AEBBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F33BE865D15A52DC5E47E5 /* Foundation.framework */; };
+		FAEFE7AE05B46E15E287C845 /* UzysWrapperPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC9621A4ADB7DB294181A1AF /* UzysWrapperPickerController.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4106539B159187A861D2712B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FBB1CC6E5F812EBD083F917 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C37B9DDA32A31503995AC73;
+			remoteInfo = "Pods-UzysAssetsPickerController";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EF14415273E00646EDED005 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		12B9051DD6D6C0DA859B88D0 /* UIImage+UzysExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+UzysExtension.m"; path = "UzysAssetsPickerController/Library/UIImage+UzysExtension.m"; sourceTree = "<group>"; };
+		14D206D9BF444A88AABECDDB /* UzysWrapperPickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysWrapperPickerController.m; path = UzysAssetsPickerController/Library/UzysWrapperPickerController.m; sourceTree = "<group>"; };
+		1C676DD03B027971BCF0F360 /* Pods-UzysAssetsPickerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UzysAssetsPickerController.xcconfig"; sourceTree = "<group>"; };
+		23C6A319DECBA7BE8DE0C69C /* UzysAssetsPickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysAssetsPickerController.h; path = UzysAssetsPickerController/Library/UzysAssetsPickerController.h; sourceTree = "<group>"; };
+		2560D81E270AFB393FA37B2E /* UzysAssetsViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysAssetsViewCell.m; path = UzysAssetsPickerController/Library/UzysAssetsViewCell.m; sourceTree = "<group>"; };
+		322BADB959C97C718FC635C2 /* UzysGroupViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysGroupViewCell.h; path = UzysAssetsPickerController/Library/UzysGroupViewCell.h; sourceTree = "<group>"; };
+		3E03B7A7700646DBA5CBF4A6 /* Pods-UzysAssetsPickerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UzysAssetsPickerController-prefix.pch"; sourceTree = "<group>"; };
+		462E348EC8504CC8644D249B /* UzysGroupViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysGroupViewCell.m; path = UzysAssetsPickerController/Library/UzysGroupViewCell.m; sourceTree = "<group>"; };
+		4A741BFFA61D7EB0BAD9FFC4 /* libPods-UzysAssetsPickerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UzysAssetsPickerController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D3B44D4D454EDC82724F14 /* UzysAssetsPickerController_Configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysAssetsPickerController_Configuration.h; path = UzysAssetsPickerController/Library/UzysAssetsPickerController_Configuration.h; sourceTree = "<group>"; };
+		56CF933A114ADF7C0BACAB49 /* UIImage+UzysExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+UzysExtension.h"; path = "UzysAssetsPickerController/Library/UIImage+UzysExtension.h"; sourceTree = "<group>"; };
+		5A007B42945E2D294CF5CD35 /* UzysAppearanceConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysAppearanceConfig.m; path = UzysAssetsPickerController/Library/UzysAppearanceConfig.m; sourceTree = "<group>"; };
+		65F8CDA5422528584D7476CC /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		66B86681FCAB62FB12B329BA /* UzysAssetPickerController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UzysAssetPickerController.bundle; path = UzysAssetsPickerController/Library/UzysAssetPickerController.bundle; sourceTree = "<group>"; };
+		68D681220AF5FC40ACC81361 /* UzysAssetsPickerController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = UzysAssetsPickerController.xib; path = UzysAssetsPickerController/Library/UzysAssetsPickerController.xib; sourceTree = "<group>"; };
+		6DB93D0B73A0B0EF5D4FEBCE /* UzysAssetsPickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysAssetsPickerController.m; path = UzysAssetsPickerController/Library/UzysAssetsPickerController.m; sourceTree = "<group>"; };
+		73F33BE865D15A52DC5E47E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7CC4B509EA86BB12698DA560 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		847134DF104C01EE94DFAA46 /* UzysGroupPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysGroupPickerView.m; path = UzysAssetsPickerController/Library/UzysGroupPickerView.m; sourceTree = "<group>"; };
+		86113A47039C5221B621ADBF /* UzysGroupPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysGroupPickerView.h; path = UzysAssetsPickerController/Library/UzysGroupPickerView.h; sourceTree = "<group>"; };
+		8D894120861F67FFC1DE6675 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		9B46A9CC48C0B9794A2B2B82 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		9BE028EAF9CE72DCDDE11158 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		A09C9C9708BE6B4130573E4A /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		A46D915A198880685E45B8FC /* Pods-UzysAssetsPickerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UzysAssetsPickerController-Private.xcconfig"; sourceTree = "<group>"; };
+		B0FF736B4DCD248384E6DB4C /* UzysAppearanceConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysAppearanceConfig.h; path = UzysAssetsPickerController/Library/UzysAppearanceConfig.h; sourceTree = "<group>"; };
+		B2534FB5F365F38A5B06573D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67D36BA90FAC46D289030B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		BAF62598AF9608F1AC4B1328 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		BC50CCCC9E59E9601B3D72DD /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		BFC182C3C10302F8B9576A20 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D5F62DEDD7164815D8D007EF /* Pods-UzysAssetsPickerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UzysAssetsPickerController-dummy.m"; sourceTree = "<group>"; };
+		D852A8078578C215BAD1DF25 /* UzysAssetsViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysAssetsViewCell.h; path = UzysAssetsPickerController/Library/UzysAssetsViewCell.h; sourceTree = "<group>"; };
+		DC9621A4ADB7DB294181A1AF /* UzysWrapperPickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysWrapperPickerController.h; path = UzysAssetsPickerController/Library/UzysWrapperPickerController.h; sourceTree = "<group>"; };
+		F1E469C61016C3D1C3C98D2E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		F4F2F80403DC795E58B7FAF5 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50A04E1B34F3BE9E6B8784F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88CAE7C25D0A7ABF9AB8FF69 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6D89CF7E5C1342571B03212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				951B7A0622879F6B0C132E07 /* AVFoundation.framework in Frameworks */,
+				378EFE516B30C3415DFC35B1 /* AssetsLibrary.framework in Frameworks */,
+				F40BA38CE79675D391322952 /* CoreGraphics.framework in Frameworks */,
+				FAD93EFC8A3D3BCD5A5AEBBC /* Foundation.framework in Frameworks */,
+				12DF6779DDE79F68E667B842 /* MobileCoreServices.framework in Frameworks */,
+				2A41028E61DDBAF17AAAC6D0 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		493C2C78EEAE30624663AE87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECA528AFC7764EE5093CE960 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65901A3AB6C54620A7FD6D1A /* UzysAssetsPickerController */ = {
+			isa = PBXGroup;
+			children = (
+				56CF933A114ADF7C0BACAB49 /* UIImage+UzysExtension.h */,
+				12B9051DD6D6C0DA859B88D0 /* UIImage+UzysExtension.m */,
+				B0FF736B4DCD248384E6DB4C /* UzysAppearanceConfig.h */,
+				5A007B42945E2D294CF5CD35 /* UzysAppearanceConfig.m */,
+				23C6A319DECBA7BE8DE0C69C /* UzysAssetsPickerController.h */,
+				6DB93D0B73A0B0EF5D4FEBCE /* UzysAssetsPickerController.m */,
+				52D3B44D4D454EDC82724F14 /* UzysAssetsPickerController_Configuration.h */,
+				D852A8078578C215BAD1DF25 /* UzysAssetsViewCell.h */,
+				2560D81E270AFB393FA37B2E /* UzysAssetsViewCell.m */,
+				86113A47039C5221B621ADBF /* UzysGroupPickerView.h */,
+				847134DF104C01EE94DFAA46 /* UzysGroupPickerView.m */,
+				322BADB959C97C718FC635C2 /* UzysGroupViewCell.h */,
+				462E348EC8504CC8644D249B /* UzysGroupViewCell.m */,
+				DC9621A4ADB7DB294181A1AF /* UzysWrapperPickerController.h */,
+				14D206D9BF444A88AABECDDB /* UzysWrapperPickerController.m */,
+				C8D419D57DCAADE53400CD35 /* Resources */,
+				D724995B116A346F9186DE88 /* Support Files */,
+			);
+			path = UzysAssetsPickerController;
+			sourceTree = "<group>";
+		};
+		765036F43854CA973D4DAC20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2534FB5F365F38A5B06573D /* libPods.a */,
+				4A741BFFA61D7EB0BAD9FFC4 /* libPods-UzysAssetsPickerController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CD32E84431123D1E4EB487A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65901A3AB6C54620A7FD6D1A /* UzysAssetsPickerController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8D419D57DCAADE53400CD35 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66B86681FCAB62FB12B329BA /* UzysAssetPickerController.bundle */,
+				68D681220AF5FC40ACC81361 /* UzysAssetsPickerController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D724995B116A346F9186DE88 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C676DD03B027971BCF0F360 /* Pods-UzysAssetsPickerController.xcconfig */,
+				A46D915A198880685E45B8FC /* Pods-UzysAssetsPickerController-Private.xcconfig */,
+				D5F62DEDD7164815D8D007EF /* Pods-UzysAssetsPickerController-dummy.m */,
+				3E03B7A7700646DBA5CBF4A6 /* Pods-UzysAssetsPickerController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-UzysAssetsPickerController";
+			sourceTree = "<group>";
+		};
+		D8D9AC0C0F5283B3493FDABB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB2CEE880F1FEDFA3782CAD3 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ECA528AFC7764EE5093CE960 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9B46A9CC48C0B9794A2B2B82 /* AVFoundation.framework */,
+				F1E469C61016C3D1C3C98D2E /* AssetsLibrary.framework */,
+				0EF14415273E00646EDED005 /* CoreGraphics.framework */,
+				73F33BE865D15A52DC5E47E5 /* Foundation.framework */,
+				BAF62598AF9608F1AC4B1328 /* MobileCoreServices.framework */,
+				B67D36BA90FAC46D289030B9 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		ED13FA8469EDCB5B363A4C2C = {
+			isa = PBXGroup;
+			children = (
+				F4F2F80403DC795E58B7FAF5 /* Podfile */,
+				493C2C78EEAE30624663AE87 /* Frameworks */,
+				9CD32E84431123D1E4EB487A /* Pods */,
+				765036F43854CA973D4DAC20 /* Products */,
+				D8D9AC0C0F5283B3493FDABB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		FB2CEE880F1FEDFA3782CAD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFC182C3C10302F8B9576A20 /* Pods-acknowledgements.markdown */,
+				7CC4B509EA86BB12698DA560 /* Pods-acknowledgements.plist */,
+				BC50CCCC9E59E9601B3D72DD /* Pods-dummy.m */,
+				65F8CDA5422528584D7476CC /* Pods-environment.h */,
+				A09C9C9708BE6B4130573E4A /* Pods-resources.sh */,
+				8D894120861F67FFC1DE6675 /* Pods.debug.xcconfig */,
+				9BE028EAF9CE72DCDDE11158 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		43D60ADC087DE9AEDD85FA4A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38529017DD2A6D38586B5EC0 /* UIImage+UzysExtension.h in Headers */,
+				BF45C0FE49063C2900C36ABD /* UzysAppearanceConfig.h in Headers */,
+				16DA39D88695B8A632869C4F /* UzysAssetsPickerController.h in Headers */,
+				3CEDAA5FC83CA44EE5705D82 /* UzysAssetsPickerController_Configuration.h in Headers */,
+				0A172698220B4785C5E420B5 /* UzysAssetsViewCell.h in Headers */,
+				8D33B9878F657FA8FF661CA3 /* UzysGroupPickerView.h in Headers */,
+				AC270D3264C879F7F25E895E /* UzysGroupViewCell.h in Headers */,
+				FAEFE7AE05B46E15E287C845 /* UzysWrapperPickerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1C37B9DDA32A31503995AC73 /* Pods-UzysAssetsPickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3255BD8C5B1E5A2CBFF426D2 /* Build configuration list for PBXNativeTarget "Pods-UzysAssetsPickerController" */;
+			buildPhases = (
+				4C11985E8CEE804752570971 /* Sources */,
+				A6D89CF7E5C1342571B03212 /* Frameworks */,
+				43D60ADC087DE9AEDD85FA4A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-UzysAssetsPickerController";
+			productName = "Pods-UzysAssetsPickerController";
+			productReference = 4A741BFFA61D7EB0BAD9FFC4 /* libPods-UzysAssetsPickerController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		57211F2D97E5ED93B8666F39 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 289DA9309B7AFA714EB2BFEC /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				95E6116E492853ACEFDCA510 /* Sources */,
+				50A04E1B34F3BE9E6B8784F1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1AF8EDDEB297969E6B0DC2F /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = B2534FB5F365F38A5B06573D /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0FBB1CC6E5F812EBD083F917 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 3278C3A25D4CEA554881DD31 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED13FA8469EDCB5B363A4C2C;
+			productRefGroup = 765036F43854CA973D4DAC20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57211F2D97E5ED93B8666F39 /* Pods */,
+				1C37B9DDA32A31503995AC73 /* Pods-UzysAssetsPickerController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C11985E8CEE804752570971 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD11C9BFF242CD2DCB9F9E51 /* Pods-UzysAssetsPickerController-dummy.m in Sources */,
+				DF075493B5A25EAF508EDF7E /* UIImage+UzysExtension.m in Sources */,
+				421BEF44FA1525A8794A7E6C /* UzysAppearanceConfig.m in Sources */,
+				3F854C9C20DF12123584FF8F /* UzysAssetsPickerController.m in Sources */,
+				ECD7DFC50B9262F5C51A9266 /* UzysAssetsViewCell.m in Sources */,
+				B562BE572F65366F95EAFB2E /* UzysGroupPickerView.m in Sources */,
+				C9CB0021AE8410D507E62892 /* UzysGroupViewCell.m in Sources */,
+				34E91C520A70C5FCDB08A6B4 /* UzysWrapperPickerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95E6116E492853ACEFDCA510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BD5507DC6279113E49714A /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1AF8EDDEB297969E6B0DC2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-UzysAssetsPickerController";
+			target = 1C37B9DDA32A31503995AC73 /* Pods-UzysAssetsPickerController */;
+			targetProxy = 4106539B159187A861D2712B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4092F4E55D8FC7DEBDDA598B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46A23D3148A32331FC05707C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE028EAF9CE72DCDDE11158 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		676B54E3AD4B397095CBF636 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A46D915A198880685E45B8FC /* Pods-UzysAssetsPickerController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-UzysAssetsPickerController/Pods-UzysAssetsPickerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8F8D42B8A99E39F00FBC6D42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A46D915A198880685E45B8FC /* Pods-UzysAssetsPickerController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-UzysAssetsPickerController/Pods-UzysAssetsPickerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B11DED5AC82A4A242468457F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D894120861F67FFC1DE6675 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FC665CA29AF05C38FDF753F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		289DA9309B7AFA714EB2BFEC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B11DED5AC82A4A242468457F /* Debug */,
+				46A23D3148A32331FC05707C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3255BD8C5B1E5A2CBFF426D2 /* Build configuration list for PBXNativeTarget "Pods-UzysAssetsPickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F8D42B8A99E39F00FBC6D42 /* Debug */,
+				676B54E3AD4B397095CBF636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3278C3A25D4CEA554881DD31 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC665CA29AF05C38FDF753F5 /* Debug */,
+				4092F4E55D8FC7DEBDDA598B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0FBB1CC6E5F812EBD083F917 /* Project object */;
+}

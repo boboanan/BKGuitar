@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BKMusicListController.h"
+#import "BKNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     BKMusicListController *musicListController = [[BKMusicListController alloc] init];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:musicListController];
+    BKNavigationController *nav = [[BKNavigationController alloc] initWithRootViewController:musicListController];
     
     self.window.rootViewController = nav;
     

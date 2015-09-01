@@ -1,0 +1,10 @@
+PODS:
+  - UzysAssetsPickerController (0.9.7)
+
+DEPENDENCIES:
+  - UzysAssetsPickerController
+
+SPEC CHECKSUMS:
+  UzysAssetsPickerController: eae7c24955501a80df34286b1797a2ec6f6b1ab9
+
+COCOAPODS: 0.37.2
